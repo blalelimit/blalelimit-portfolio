@@ -1,7 +1,7 @@
 // Quote Of The Day Generator 
 const quoteBox = document.getElementById('quoteBox');
 
-if (quoteBox) {
+if (quoteBox != null) {
   quoteBox.addEventListener('load', getQuote());
 }
 

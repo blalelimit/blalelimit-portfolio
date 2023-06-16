@@ -204,6 +204,8 @@ search: false
 
 // QOTD Animation
 .longanimated {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -229,7 +231,6 @@ search: false
   }
   60% {
     opacity: 1;
-    color: rgb(5, 107, 199);
     -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
     transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
     -webkit-animation-timing-function: cubic-bezier(0.175, .885, .32, 1);
@@ -238,7 +239,8 @@ search: false
 }
 @keyframes zoomInDown {
   0% {
-    opacity: 0.5;
+    opacity: 0;
+    color: rgb(255, 255, 255);
     -webkit-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
     -ms-transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
     transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
@@ -247,7 +249,6 @@ search: false
   }
   60% {
     opacity: 1;
-    color: rgb(255, 255, 255);
     -webkit-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
     -ms-transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
     transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
@@ -262,3 +263,185 @@ search: false
   font-family: "Consolas";
   font-weight: 550;
 }
+
+// Wrapper Animation
+.rotateanimation {
+  position: relative;
+  animation-delay: 0.1s;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+.container {
+  height: 550px;
+  display: block;
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.animationwrapper {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+}
+
+.planet {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: lightgray;
+  box-shadow: 0 0 1px lightgray,
+      0 0 5px lightgray,
+      0 0 15px rgb(60, 60, 60),
+      inset 0 0 5px rgb(60, 60, 60);
+  position: absolute;
+}
+
+.rotate {
+  animation-name: rotate; // Wrapper Animation
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.reverserotate {
+  animation-name: reverserotate; // Wrapper Reverse Animation
+}
+
+@keyframes reverserotate {
+  to {
+    transform: rotate(-720deg);
+  }
+}
+
+// Planet Animation
+.darkenanimation {
+  position: relative;
+  animation-delay: 0.1s;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+.darken {
+  animation-name: darken;
+}
+
+@keyframes darken {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// Sun and Mini Sun Animation
+.sunanimation {
+  animation-delay: 0.1s;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.sun {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  box-shadow: 0 0 10px orange,
+    0 0 60px orange,
+    0 0 200px yellow,
+    inset 0 0 80px yellow;
+  border-radius: 50%;
+  inset: 0;
+  margin: auto;
+  position: absolute;
+
+  .minisun {
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    box-shadow: 0 0 3px orange,
+      0 0 15px orange,
+      0 0 50px yellow,
+      inset 0 0 20px yellow;
+    border-radius: 50%;
+    inset: 0;
+    margin: auto;
+    position: absolute;
+    opacity: 1;
+  }
+
+  .minisun:nth-child(1) {
+    transform: translate3d(250px, 0px, 0);
+  }
+  .minisun:nth-child(2) {
+    transform: translate3d(calc(250px * 1.4142 * 0.5), calc(-250px * 1.4142 * 0.5) , 0);
+  }
+  .minisun:nth-child(3) {
+    transform: translate3d(0px, -250px, 0);
+  }
+  .minisun:nth-child(4) {
+    transform: translate3d(calc(-250px * 1.4142 * 0.5), calc(-250px * 1.4142 * 0.5) , 0);
+  }
+  .minisun:nth-child(5) {
+    transform: translate3d(-250px, 0px, 0);
+  }
+  .minisun:nth-child(6) {
+    transform: translate3d(calc(-250px * 1.4142 * 0.5), calc(250px * 1.4142 * 0.5) , 0);
+  }
+  .minisun:nth-child(7) {
+    transform: translate3d(0px, 250px, 0);
+  }
+  .minisun:nth-child(8) {
+    transform: translate3d(calc(250px * 1.4142 * 0.5), calc(250px * 1.4142 * 0.5) , 0);
+  }
+}
+
+.expand {
+  animation-name: expand; // Sun Animation
+}
+
+@keyframes expand {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.spread {
+  animation-name: spread; // Mini Sun Animation
+}
+
+@keyframes spread {
+  50% {
+    opacity: 0;
+    transform: translate3d(0px, 0px, 0);
+  }
+}
+
+
+
+

@@ -1,6 +1,10 @@
 // Quote Of The Day Generator 
 const quoteBox = document.getElementById('quoteBox');
 
+if (quoteBox) {
+  quoteBox.addEventListener('load', getQuote());
+}
+
 async function getQuotesList() {
   const response = await fetch('./assets/quotes.txt');  // Fetch response from textfile
   const r_quotes = (await response.text()).split('\n');
@@ -18,5 +22,3 @@ async function getQuote() {
   let qotd = quotes[val];  // Get qotd based on index for random number
   quoteBox.innerHTML = qotd;
 };
-
-quoteBox.addEventListener('load', getQuote());

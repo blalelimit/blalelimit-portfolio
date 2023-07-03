@@ -17,17 +17,20 @@ if __name__ == '__main__'
 <h2>Facts About Me</h2>
 <ul>
   <li>🔭 I’m currently looking for job opportunities and a bright future.</li>
-  <li>🌱 I’m currently learning more about Python and Javascript, in particular the extensive libraries of Python and Node.JS.</li>
+  <li>🌱 I’m currently learning more about Python and Javascript, in particular the extensive libraries of Python, Node.js, and React.</li>
   <li>⚡ Fun Fact: It's all coming together, everything, the stars in the <strong>galaxy</strong>.</li>
-  <li>🥅 Goals: To find job opportunities and improve my current Tech Stack.</li>
+  <li>🥅 Goals: To find job opportunities and improve my current skills as a developer.</li>
 </ul>
 
 <h2>FFmpeg Simple Audio Processing</h2>
 {% highlight bash %}
-# The volume of an audio can be normalized using FFmpeg
+# The volume of an audio can be adjusted to 50% using FFmpeg
+ffmpeg -i input.wav -af "volume=0.50" output.wav
+
+# The volume can also be normalized through
 ffmpeg -i input.mp3 -filter:a loudnorm output.mp3
 
-# The volume of an audio can also be muted through
-ffmpeg -i input.mp3 -an output.mp3
+# The `-an` flag can also be added to mute audio
+ffmpeg -i input.mp4 -an output.mp4
 {% endhighlight %}
 

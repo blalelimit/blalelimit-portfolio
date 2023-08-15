@@ -13,8 +13,8 @@ feature_row:
     alt: "Datamethods"
     title: "Datamethods"
     excerpt: "A simple repository that compiles several Data Analysis, Visualization, and Mining methods and techniques to analyze and discover patterns in different sets of data."
-    url: "https://github.com/blalelimit/datamethods"
-    btn_label: "Open"
+    url: "/sample-visualizations/"
+    btn_label: "More Visualizations"
     btn_class: "btn--inverse"
 feature_row2:
   - image_path: /assets/images/600x400_2.png
@@ -41,7 +41,7 @@ feature_row4:
 outro: 
   - url: "https://github.com/blalelimit"
     btn_label: "More on GitHub"
-    btn_class: "btn--inverse"
+    btn_class: "btn--primary"
 ---
 
 {% highlight python %}

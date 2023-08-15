@@ -136,7 +136,7 @@ $(function() {
 });
 
 // Pulse Animation
-let el = $('.imgitem');
+let el = $('.img-item');
 el.mouseover(function() {
   el.toggleClass('pulse animated');
   el.on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e) {
@@ -145,10 +145,10 @@ el.mouseover(function() {
 });
 
 // Profile Image Animation
-let ele = $('.imgavatar');
-ele.mouseover(function() {
-  ele.toggleClass('rubberBand animated');
-  ele.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e) {
+let el2 = $('.img-avatar');
+el2.mouseover(function() {
+  el2.toggleClass('rubberBand animated');
+  el2.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(e) {
     $(e.target).removeClass('rubberBand animated');
   });
 });

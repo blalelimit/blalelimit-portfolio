@@ -1,0 +1,6 @@
+<audio controls class="{{ include.class }}"
+         style="margin: 0 auto; display: block;">
+    <source src="{{ include.audio_path | relative_url }}"
+             type="{{ include.type | default: 'audio/mp3' }}">
+    Your browser does not support the audio element.
+</audio>

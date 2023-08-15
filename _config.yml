@@ -25,7 +25,7 @@ url                      : "https://blalelimit.github.io"
 baseurl                  : "/blalelimit-portfolio"
 repository               : "blalelimit/blalelimit-portfolio"
 teaser                   : "/assets/images/500x300.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/88x88_1.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/88x88_1.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88_1.png"
 masthead_title           : "Home"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "BlaleLimit"
-  avatar           : "/assets/images/88x88_2.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/88x88_2.png" # path of avatar image, e.g. "/assets/images/88x88_2.png"
   bio              : "It's all coming together, everything, the stars in the **galaxy**."
   location         :
   email            :
@@ -183,7 +183,9 @@ exclude:
   - tmp
   # # - /docs # ignore Minimal Mistakes /docs
   # # - /test # ignore Minimal Mistakes /test
-  - /projects 
+  - /sample-animation
+  - /projects
+  - /sample-visualizations
   - /about
 keep_files:
   - .git
@@ -281,6 +283,7 @@ compress_html:
 after_footer_scripts:
   - /assets/js/seedrandom.min.js
   - /assets/js/qotd.js
+  # - /assets/js/quotable_qotd.js
 
 # Defaults
 defaults:

@@ -276,14 +276,45 @@ search: false
 }
 
 .container {
-  height: 550px;
+  height: 850px;
+  width: 850px;
   display: block;
   position: relative;
-  margin-top: 150px;
-  margin-bottom: 50px;
+  overflow: hidden;
+  background-color: #111;
+  margin: 75px auto 50px auto;
+  border-radius: 50%;
 }
 
-.animationwrapper {
+.container::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5rem solid transparent;
+  background: conic-gradient(#111, #252a34, #d3d3d3) border-box;
+  -webkit-mask:
+  conic-gradient(#111 0 0) padding-box, 
+    conic-gradient(#111 0 0);
+  -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    display: none;
+  }
+}
+
+.sunwrapper {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+}
+
+.planetwrapper {
+  width: 500px;
+  height: 500px;
   inset: 0;
   margin: auto;
   position: absolute;
@@ -442,6 +473,65 @@ search: false
   }
 }
 
+// Stars
+// Source: Pure CSS starfield by Keith Clark
+.stars {
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+}
+
+.stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: zoom-in 2.5s infinite;
+  opacity: 0;
+}
+
+.stars:nth-child(1) {
+  background-position: 50% 50%;
+  animation-delay: 0s;
+}
+.stars:nth-child(2) {
+  background-position: 20% 60%;
+  animation-delay: 0.5s;
+}
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+  animation-delay: 1.0s;
+}
+.stars:nth-child(4) {
+  background-position: 40% -80%;
+  animation-delay: 1.5s;
+}
+.stars:nth-child(5) {
+  background-position: -20% 30%;
+  animation-delay: 2.0s;
+}
+
+@keyframes zoom-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+    animation-timing-function: linear;
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1.4);
+    animation-timing-function: linear;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+}
 
 
 

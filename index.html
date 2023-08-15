@@ -5,29 +5,28 @@ header:
   overlay_color: "#000"
   overlay_image: /assets/images/1600x500.png
 feature_row:
-  - title: "Quote Of The Day (QOTD)"
-    excerpt: <p id="quoteBox" class="zoomInDown longanimated"></p>
-    btn_label: "Open"
-    btn_class: "btn--inverse"
-feature_row2:
   - image_path: /assets/images/600x400_1.png
     alt: "Datamethods"
     title: "Datamethods"
-    url: "/projects/"
-    btn_label: "More on Projects"
+    url: "/sample-visualizations/"
+    btn_label: "More Visualizations"
     btn_class: "btn--inverse"
   - image_path: /assets/images/600x400_2.png
     alt: "Media Processing"
     title: "Media Processing Python"
+    url: "/projects/"
+    btn_label: "More on Projects"
+    btn_class: "btn--inverse"
 ---
 
-{% include feature_row type="center" %}
+<h2>Quote Of The Day (QOTD)</h2>
+{% include quote_box %}
 
 <h2>Who I Am</h2>
 <p>I am <strong>blalelimit</strong>. 
-  To improve my industry skills, I create programs written in Python, Javascript, and Java. 
-  I engage in the discovery of Machine Learning models, an area I am most interested in. 
-  I also enjoy video editing and multimedia processing through Python Image Library (PIL) and FFmpeg.
+  To improve my industry skills, I create programs written in <i>Python</i>, <i>Javascript</i>, and <i>Java</i>. 
+  I am interested in <i>Machine Learning</i>, video editing through <i>FFmpeg</i>, and multimedia processing with
+  <i>Python Image Library (PIL)</i>.
 </p>
 
 {% highlight python %}
@@ -42,9 +41,9 @@ if __name__ == '__main__'
 
 <h2>What I Do</h2>
 <p>I implement tools for understanding data, such as algorithms and models.
-  I am fascinated on seeing the relationship and connection between attributes found in data. 
-  As a Computer Scientist, I see the importance of critical thinking.
-  I also believe that we engage in a lifelong learning.
+  I am fascinated on discovering the relationships and connections of attributes in data. 
+  As a Computer Scientist, critical and analytical thinking is necessary to derive
+  conclusions from various data. I also believe that we engage in a lifelong learning.
 </p>
 
 {% highlight python %}
@@ -58,5 +57,7 @@ img.save('outputs/output.ico', 'ico', sizes=[(64, 64)])
 {% endhighlight %}
 
 <h2>My Projects</h2>
-{% include feature_row id="feature_row2" %}
+{% include feature_row id="feature_row" type="left" %}
+
+
 

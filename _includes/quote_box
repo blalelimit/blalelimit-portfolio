@@ -1,0 +1,6 @@
+<div class="quoteBox">
+    <p style="color:#89ddff" id="quoteItem" class="zoomInDown longanimated"></p>
+    <p id="citeItem" class="zoomInDown longanimated"></p>
+</div>
+
+

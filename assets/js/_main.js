@@ -152,3 +152,16 @@ el2.mouseover(function() {
     $(e.target).removeClass('rubberBand animated');
   });
 });
+
+// Typing Animation
+let typed = new Typed('.typing', {
+   strings: [
+     'BlaleLimit is a Developer',
+     'BlaleLimit is a Data Scientist',
+     'i used arch btw :)',
+     'i love coding!'
+   ],
+   loop: true,
+   typeSpeed: 30,
+   backSpeed: 20,
+});

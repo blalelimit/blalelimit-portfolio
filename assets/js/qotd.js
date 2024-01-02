@@ -1,4 +1,4 @@
-// Quote Of The Day Generator 
+// Quote Of The Day Generator
 const quoteItem = document.getElementById('quoteItem');
 const citeItem = document.getElementById('citeItem');
 

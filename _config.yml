@@ -10,8 +10,8 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
+# theme                  : "minimal-mistakes-jekyll"
+remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -104,7 +104,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "BlaleLimit"
+  # name             : "BlaleLimit"
   avatar           : "/assets/images/88x88_2.png" # path of avatar image, e.g. "/assets/images/88x88_2.png"
   bio              : "It's all coming together, everything, the stars in the **galaxy**."
   location         :
@@ -183,10 +183,10 @@ exclude:
   - tmp
   # # - /docs # ignore Minimal Mistakes /docs
   # # - /test # ignore Minimal Mistakes /test
-  - /sample-animation
   - /projects
   - /sample-visualizations
   - /about
+  - /css-animation
 keep_files:
   - .git
   - .svn
@@ -280,10 +280,17 @@ compress_html:
 
 
 # Javascript
+head_scripts:
+  - https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js
 after_footer_scripts:
   - /assets/js/seedrandom.min.js
   - /assets/js/qotd.js
-  # - /assets/js/quotable_qotd.js
+  # - /assets/js/typed/typed.js
+  # - /assets/js/typed/defaults.js
+  # - /assets/js/typed/html-parser.js
+  # - /assets/js/typed/initializer.js
+  # - /assets/js/quotable_q
+
 
 # Defaults
 defaults:

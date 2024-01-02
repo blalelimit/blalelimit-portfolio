@@ -2,5 +2,7 @@
 main:
   - title: "Projects"
     url: /projects/
+  - title: "Visualizations"
+    url: /sample-visualizations/
   - title: "About Me"
     url: /about/
